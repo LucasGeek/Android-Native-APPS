@@ -1,18 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/editDistance"
+            style="@style/mCustomEditText"
+            android:hint="@string/distancia" />
+
+        <TextView
+            style="@style/mCustomText"
+            android:text="@string/total_de_quilomentros" />
+
+        <EditText
+            android:id="@+id/editPrice"
+            style="@style/mCustomEditText"
+            android:hint="@string/preco" />
+
+        <TextView
+            style="@style/mCustomText"
+            android:text="@string/preco_por_litro" />
+
+        <EditText
+            android:id="@+id/editAutonomy"
+            style="@style/mCustomEditText"
+            android:hint="@string/autonomia" />
+
+        <TextView
+            style="@style/mCustomText"
+            android:text="@string/km_s_por_litro" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:text="@string/seu_gasto_total_ser_de"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:text="@string/gasto_total"
+            android:textAllCaps="true"
+            android:textColor="#fd6a6a"
+            android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/round_btn"
+            android:padding="25dp"
+            android:text="@string/botao_calcular"
+            android:textAllCaps="true"
+            android:textColor="@color/colorLightGray"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</ScrollView>

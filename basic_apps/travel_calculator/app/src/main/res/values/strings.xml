@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">TravelCalculator</string>
+    <string name="app_name">Travel Calculator</string>
+    <string name="distancia">Distância</string>
+    <string name="preco">Preço</string>
+    <string name="autonomia">Autonomia</string>
+    <string name="botao_calcular">Calcular</string>
+    <string name="valores_validos">Por favor, informe valores validos!</string>
+    <string name="total_de_quilomentros">Total de Quilomentros</string>
+    <string name="preco_por_litro">Preço por litro</string>
+    <string name="km_s_por_litro">KM\'s por litro</string>
+    <string name="seu_gasto_total_ser_de">Seu gasto total será de:</string>
+    <string name="gasto_total">R$ 0,00</string>
 </resources>
