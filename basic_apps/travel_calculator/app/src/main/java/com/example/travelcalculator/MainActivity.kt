@@ -12,6 +12,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (v.id) {
             R.id.buttonCalculate -> handleCalculate()
             R.id.buttonClean -> cleanText()
+            else -> {
+                println("Ops...")
+                println(v.id)
+            }
         }
     }
 
@@ -20,6 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         buttonCalculate.setOnClickListener(this)
+        buttonClean.setOnClickListener(this)
     }
 
     private fun cleanText() {
@@ -39,14 +44,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             textResult.setText("Total: R$ $result")
 
         } catch (nfe: NumberFormatException) {
-            toastError()
+            toastMsg()
         }
 
     } else {
-        toastError()
+        toastMsg()
     }
 
-    private fun toastError() {
+    private fun toastMsg() {
         Toast.makeText(this, getString(R.string.valores_validos), Toast.LENGTH_LONG).show()
     }
 
