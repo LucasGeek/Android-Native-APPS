@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.buttonCalculate -> handleCalculate()
+            R.id.buttonClean -> cleanText()
         }
     }
 
@@ -19,6 +20,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         buttonCalculate.setOnClickListener(this)
+    }
+
+    private fun cleanText() {
+        editDistance.text.clear()
+        editPrice.text.clear()
+        editAutonomy.text.clear()
+        textResult.text = getString(R.string.gasto_total)
     }
 
     private fun handleCalculate() = if (isValid()) {

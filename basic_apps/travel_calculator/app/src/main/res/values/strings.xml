@@ -10,4 +10,5 @@
     <string name="km_s_por_litro">KM\'s por litro</string>
     <string name="seu_gasto_total_ser_de">Seu gasto total será de:</string>
     <string name="gasto_total">R$ 0,00</string>
+    <string name="limpar">Limpar</string>
 </resources>
