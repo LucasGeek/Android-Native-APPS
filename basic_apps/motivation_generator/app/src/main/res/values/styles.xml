@@ -19,4 +19,11 @@
         <item name="windowActionBar">false</item>
     </style>
 
+    <style name="StatusBarColor" parent="@style/Theme.AppCompat">
+        <item name="android:statusBarColor">@color/colorPrimaryMedium</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
 </resources>

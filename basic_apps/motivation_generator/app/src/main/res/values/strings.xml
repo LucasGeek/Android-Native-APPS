@@ -3,4 +3,7 @@
     <string name="qual_seu_nome">Qual é seu nome?</string>
     <string name="salvar">Salvar</string>
     <string name="informe_seu_nome">Por favor, informe seu nome!</string>
+    <string name="nova_frase">Nova frase</string>
+    <string name="ola_usuario">Olá, usuário</string>
+    <string name="phrase">Phrase</string>
 </resources>
