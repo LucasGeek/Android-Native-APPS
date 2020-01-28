@@ -36,7 +36,7 @@
 ## Motivation Generator (motivation_generator)
 
 ###### Regra de Negócio:
-- O aplicativo irá guardar o nome da última pessoa que acessou o app, e ficará gerando randomicamente novas frases de acordo com a seleção do tipo de frase (TODAS, FELIZES e MANHÃ) a ser gerada;
+- O aplicativo irá guardar o nome da última pessoa que acessou o app, e ficará gerando randomicamente novas frases de acordo com a seleção do tipo de frase (ALL, MORNING e HAPPY) a ser gerada;
 
 ###### Oque contem no código:
 - Usando *Shared Preferences*;
