@@ -1,0 +1,59 @@
+package com.example.taskschedule.repository
+
+import android.content.ContentValues
+import android.content.Context
+import android.database.Cursor
+import com.example.taskschedule.constants.DataBaseConstants
+import java.lang.Exception
+
+class UserRepository private constructor(context: Context) {
+
+    private var mTaskDataBaseHelper : TaskDataBaseHelper = TaskDataBaseHelper(context)
+
+    companion object {
+        fun getInstance(context: Context): UserRepository {
+            if (INSTANCE == null) {
+                INSTANCE = UserRepository(context)
+            }
+
+            return INSTANCE as UserRepository
+        }
+
+        private var INSTANCE: UserRepository? = null
+    }
+
+    fun Insert(name: String, email: String, password: String): Int {
+        val db = mTaskDataBaseHelper.writableDatabase
+
+        val insertValues = ContentValues()
+        insertValues.put(DataBaseConstants.USER.COLUMNS.NAME, name)
+        insertValues.put(DataBaseConstants.USER.COLUMNS.EMAIL, email)
+        insertValues.put(DataBaseConstants.USER.COLUMNS.PASSWORD, password)
+
+        return db.insert(DataBaseConstants.USER.TABLE_NAME, null, insertValues).toInt()
+    }
+
+    fun isEmailExistent(email: String): Boolean {
+
+        val ret: Boolean
+
+        try {
+            val db = mTaskDataBaseHelper.readableDatabase
+            val cursor: Cursor
+
+            val projection = arrayOf(DataBaseConstants.USER.COLUMNS.ID)
+            val selection = "${DataBaseConstants.USER.COLUMNS.EMAIL} = ?"
+            val selecttionArgs = arrayOf(email)
+
+            cursor = db.query(DataBaseConstants.USER.TABLE_NAME, projection, selection, selecttionArgs, null, null, null)
+
+            ret = cursor.count > 0
+
+            cursor.close()
+        } catch (e: Exception) {
+            throw e
+        }
+
+        return ret
+    }
+}
