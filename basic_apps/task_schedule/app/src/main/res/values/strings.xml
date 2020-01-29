@@ -1,12 +1,5 @@
 <resources>
     <string name="app_name">Task Schedule</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="menu_done">Feitas</string>
     <string name="menu_todo">Pendentes</string>
@@ -19,4 +12,9 @@
     <string name="erro_inesperado">Algo de errado aconteceu!</string>
     <string name="email_em_uso">Email já está em uso!</string>
     <string name="erro_ao_cadastrar_usuario">Ocorreu um erro ao cadastrar o usuário! Tente novamente.</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Senha</string>
+    <string name="login_entrar">Entrar</string>
+    <string name="usuario_senha_incorretos">Usuário e/ou senha incorretos!</string>
+    <string name="login_cadastre_se">Cadastre - se</string>
 </resources>
