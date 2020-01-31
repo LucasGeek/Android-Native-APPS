@@ -17,4 +17,17 @@
     <string name="login_entrar">Entrar</string>
     <string name="usuario_senha_incorretos">Usuário e/ou senha incorretos!</string>
     <string name="login_cadastre_se">Cadastre - se</string>
+    <string name="title_drawer">Olá, usuário!</string>
+    <string name="sub_title_drawer">Sexta, 31 de janeiro</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task_create_descricao">Descrição</string>
+    <string name="task_create_completa">Completa</string>
+    <string name="task_create_date">Clique para selecionar data</string>
+    <string name="task_create_add">Adicionar Tarefa</string>
+    <string name="task_create_update">Atualizar Tarefa</string>
+    <string name="tarefa_incluida_com_sucesso">Tarefa incluida com sucesso!</string>
+    <string name="tarefa_alterada_com_sucesso">Tarefa alterada com sucesso!</string>
+    <string name="tarefa_removida_com_sucesso">Tarefa excluida com sucesso!</string>
 </resources>

@@ -49,7 +49,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         } catch (e: ValidationException) {
             Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
         } catch (e: Exception) {
-            Toast.makeText(this, getString(R.string.erro_inesperado), Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.erro_inesperado) + " " + e.message, Toast.LENGTH_LONG).show()
         }
     }
 

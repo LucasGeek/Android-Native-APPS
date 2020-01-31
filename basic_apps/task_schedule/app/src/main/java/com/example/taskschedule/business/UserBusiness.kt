@@ -61,4 +61,18 @@ class UserBusiness(private val context: Context) {
 
         return !(userName.isNullOrEmpty() || userEmail.isNullOrEmpty() || userId.isNullOrEmpty())
     }
+
+    fun doLogout() {
+        mSecurityPreferences.removeStoredString(TaskConstants.KEY.USER_NAME)
+        mSecurityPreferences.removeStoredString(TaskConstants.KEY.USER_EMAIL)
+        mSecurityPreferences.removeStoredString(TaskConstants.KEY.USER_ID)
+    }
+
+    fun getNameUser(): String {
+        return mSecurityPreferences.getStoredString(TaskConstants.KEY.USER_NAME)
+    }
+
+    fun getEmailUser(): String {
+        return mSecurityPreferences.getStoredString(TaskConstants.KEY.USER_EMAIL)
+    }
 }
