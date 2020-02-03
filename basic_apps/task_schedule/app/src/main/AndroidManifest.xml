@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.TaskFromActivity" />
         <activity
             android:name=".views.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
@@ -19,11 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.RegisterActivity" />
+
+        <activity android:name=".views.RegisterActivity" android:parentActivityName=".views.LoginActivity"/>
+
         <activity
             android:name=".views.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:name=".views.TaskFromActivity" android:parentActivityName=".views.MainActivity"/>
     </application>
 
 </manifest>

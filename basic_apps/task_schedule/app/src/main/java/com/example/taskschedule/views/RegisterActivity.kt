@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Toast
 import com.example.taskschedule.R
 import com.example.taskschedule.business.UserBusiness
-import com.example.taskschedule.repository.UserRepository
 import com.example.taskschedule.util.ValidationException
 import kotlinx.android.synthetic.main.activity_register.*
 import java.lang.Exception

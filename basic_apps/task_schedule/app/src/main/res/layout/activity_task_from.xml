@@ -24,10 +24,9 @@
         style="@style/mGrayEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPrioridade"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editDescription" />
 
     <View
@@ -81,7 +80,7 @@
         android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="#ececec"
         app:layout_constraintTop_toBottomOf="@+id/buttonDate"
         tools:layout_editor_absoluteX="16dp" />
@@ -100,9 +99,11 @@
         android:id="@+id/textPrioridade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:paddingLeft="25dp"
         android:text="Prioridade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editDescription" />
 
