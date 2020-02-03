@@ -16,9 +16,9 @@
     <string name="login_password">Senha</string>
     <string name="login_entrar">Entrar</string>
     <string name="usuario_senha_incorretos">Usuário e/ou senha incorretos!</string>
-    <string name="login_cadastre_se">Cadastre - se</string>
+    <string name="login_cadastre_se">Cadastre-se</string>
     <string name="title_drawer">Olá, usuário!</string>
-    <string name="sub_title_drawer">Sexta, 31 de janeiro</string>
+    <string name="sub_title_drawer">email@email.com</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

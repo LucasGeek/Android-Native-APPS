@@ -2,52 +2,108 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/activity_vertical_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.TaskFromActivity">
 
     <EditText
         android:id="@+id/editDescription"
+        style="@style/mGrayEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="@string/task_create_descricao"
+        android:lines="2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinnerPriority"
+        style="@style/mGrayEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editDescription" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textPrioridade"
+        app:layout_constraintTop_toBottomOf="@+id/editDescription" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="16dp"
+        android:background="#ececec"
+        app:layout_constraintTop_toBottomOf="@+id/checkComplete"
+        tools:layout_editor_absoluteX="16dp" />
 
     <CheckBox
         android:id="@+id/checkComplete"
+        style="@style/mGrayTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:button="@drawable/checkbox_selector"
+        android:paddingLeft="16dp"
         android:text="@string/task_create_completa"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinnerPriority" />
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="32dp"
+        android:background="#ececec"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPriority"
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/buttonDate"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:shadowColor="@android:color/transparent"
         android:text="@string/task_create_date"
+        android:textColor="@color/colorGrayText"
+        android:textColorHint="@color/colorGrayText"
+        android:textSize="14sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkComplete" />
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="32dp"
+        android:background="#ececec"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDate"
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/buttonSave"
+        style="@style/mDefaultButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/task_create_add"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonDate" />
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textPrioridade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:paddingLeft="25dp"
+        android:text="Prioridade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
