@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">HG Brasil</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="title_permission">Antes de qualquer coisa conceda as permissões!</string>
+    <string name="subtitle_permission">Permissões necessarias paradrawer_title_weather que o app funcione com qualidade!</string>
+    <string name="btn_permission">Habilitar</string>
+    <string name="title_denied_message_permission">Permissão Recusada</string>
+    <string name="permanently_denied_message_permission">Abra as configurações do aplicativo para permitir permissões ou cancele para finalizar o fluxo de permissões.</string>
+    <string name="denied_message_permission">Permita-nos continuar solicitando permissões novamente ou cancele para encerrar o fluxo de permissões.</string>
+
+    <string name="drawer_title_home">Home</string>
+    <string name="drawer_title_weather">Clima</string>
+    <string name="drawer_title_finance">Finança</string>
+    <string name="drawer_title_geo">GeoIP</string>
+    <string name="drawer_title_setting">Configuração</string>
+    <string name="drawer_title_api">API</string>
+    <string name="drawer_title_about">Sobre</string>
+    <string name="drawer_title_welcome">Seja bem-vindo</string>
+    <string name="drawer_subtitle">Aplicativo de informação do HG Brasil</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

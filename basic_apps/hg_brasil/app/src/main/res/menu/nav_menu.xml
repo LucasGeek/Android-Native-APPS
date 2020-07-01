@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_whatshot"
+            android:title="@string/drawer_title_home"/>
+        <item
+            android:id="@+id/nav_weather"
+            android:icon="@drawable/ic_whatshot"
+            android:title="@string/drawer_title_weather"/>
+        <item
+            android:id="@+id/nav_finance"
+            android:icon="@drawable/ic_whatshot"
+            android:title="@string/drawer_title_finance"/>
+        <item
+            android:id="@+id/nav_geo"
+            android:icon="@drawable/ic_whatshot"
+            android:title="@string/drawer_title_geo"/>
+    </group>
+
+
+    <item android:title="@string/drawer_title_setting">
+        <menu>
+            <item
+                android:id="@+id/nav_api"
+                android:icon="@drawable/ic_whatshot"
+                android:title="@string/drawer_title_api"/>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_whatshot"
+                android:title="@string/drawer_title_about"/>
+        </menu>
+    </item>
+</menu>

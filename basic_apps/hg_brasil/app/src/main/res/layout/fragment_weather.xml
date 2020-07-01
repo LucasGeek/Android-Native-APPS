@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.main.fragments.weather.WeatherFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="150dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:clipToPadding="false"
+                android:gravity="center">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_whatshot"
+                    android:minHeight="100dp"
+                    android:minWidth="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgWeather"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txtCelcius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    tools:text="10°C"/>
+
+                <TextView
+                    android:id="@+id/txtCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="São Paulo, SP"/>
+
+                <TextView
+                    android:id="@+id/txtDescriptionWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Ensolarado"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewWeather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/weather_item_list"/>
+    </LinearLayout>
+
+</FrameLayout>

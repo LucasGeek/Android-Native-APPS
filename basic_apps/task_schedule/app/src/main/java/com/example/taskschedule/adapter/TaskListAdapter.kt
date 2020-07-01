@@ -10,7 +10,7 @@ import com.example.taskschedule.viewholder.TaskViewHolder
 
 class TaskListAdapter(private val taskList: List<TaskEntity>, val listener: OnTaskListFragmentInteractionListener) : RecyclerView.Adapter<TaskViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-        val context = parent?.context
+        val context = parent.context
         val inflator = LayoutInflater.from(context)
         val view = inflator.inflate(R.layout.row_task_list, parent, false)
 
