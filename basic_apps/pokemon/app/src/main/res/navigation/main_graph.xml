@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/typeListFragment">
+
+    <fragment
+        android:id="@+id/typeListFragment"
+        android:name="io.tecnodev.pokemon.ui.type_list.TypeListFragment"
+        android:label="@string/typeList_type"
+        tools:layout="@layout/type_list_fragment">
+
+        <action
+            android:id="@+id/action_typeListFragment_to_pokemonListFragment"
+            app:destination="@id/pokemonListFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pokemonListFragment"
+        android:name="io.tecnodev.pokemon.ui.pokemon_list.PokemonListFragment"
+        android:label="@string/typeList_pokemon"
+        tools:layout="@layout/pokemon_list_fragment">
+
+<!--        <action-->
+<!--            android:id="@+id/action_pokemonListFragment_to_detailFragment"-->
+<!--            app:destination="@id/detailFragment" />-->
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/detailFragment"-->
+<!--        android:name="io.tecnodev.pokemon.ui.detail.DetailActivity"-->
+<!--        android:label="@string/detail_pokemon"-->
+<!--        tools:layout="@layout/activity_detail">-->
+<!--    </fragment>-->
+</navigation>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">pokemon</string>
+
+    <!-- Type List Activity -->
+    <string name="types_title">Tipos de Pokemons</string>
+    <string name="types_error_400_generic">Erro não tradado</string>
+    <string name="types_error_500_generic">Erro catastrófico</string>
+
+    <!-- SubscriberList -->
+    <string name="typeList_type">Tipos de Pokemons</string>
+    <string name="typeList_pokemon">Pokemons</string>
+    <string name="detail_pokemon">Detalhes</string>
+    <string name="sobre_menu">Sobre</string>
+    <string name="height_detail">Altura</string>
+    <string name="weight_detail">Largura</string>
+    <string name="exp_detail">Experiência</string>
+    <string name="name_detail">Seu pokemon</string>
+</resources>
