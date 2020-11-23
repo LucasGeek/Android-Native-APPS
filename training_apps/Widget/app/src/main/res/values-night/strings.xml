@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtAdicionar">Ajuda</string>
+    <string name="txtAjuda">Ajuda</string>
+    <string name="txtSalvar">Salvar</string>
+    <string name="txtEditar">Editar</string>
+    <string name="txtData">DATA</string>
+</resources>

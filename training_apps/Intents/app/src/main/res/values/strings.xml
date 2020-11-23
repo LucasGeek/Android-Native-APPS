@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Intents</string>
+
+    <string name="btnLigar">Ligar</string>
+    <string name="txtTelefone">Informe um número de telefone</string>
+
+    <string name="txtLabelNome">Informe seu nome:</string>
+    <string name="txtLabelCurso">Informe o curso:</string>
+    <string name="txtBtnProximo">Proxímo</string>
+    <string name="txtBtnAvaliar">Avaliar</string>
+    <string name="txtBtnVoltar">Voltar</string>
+    <string name="txtBtnfinalizar">Finalizar</string>
+</resources>

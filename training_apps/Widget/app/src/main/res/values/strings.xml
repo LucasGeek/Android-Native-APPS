@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">widgets</string>
+
+    <string name="rotuloCurso">Marque o(s) cursos de interesse(s)</string>
+    <string name="rotuloInfor">Deseja receber informações adicionais</string>
+    <string name="txtAndroidB">Android Basico</string>
+    <string name="txtAndroidI">Android Intermediario</string>
+    <string name="txtAndroidA">Android Avançado</string>
+    <string name="txtSim">Sim</string>
+    <string name="txtNao">Não</string>
+    <string name="txtBtnOk">OK !</string>
+    <string name="txtResposta">Resposta: </string>
+
+
+    <string name="txtTitulo">1 - Selecione a área de atuação</string>
+    <string name="txtSelecionar">Selecionar</string>
+    <string name="txtRotulo">2 - Informe as suas habilidades</string>
+    <string name="txtAdd">Add +</string>
+    <string name="txtObservacao">Obs:. Clique no item para removê-lo</string>
+    <string name="txtAdicionar">Ajuda</string>
+    <string name="txtDeletar">Deletar</string>
+    <string name="txtAjuda">Ajuda</string>
+    <string name="txtSalvar">Salvar</string>
+    <string name="txtEditar">Editar</string>
+    <string name="txtUpload">Upload</string>
+    <string name="txtPreferencias">Preferencias</string>
+    <string name="txtMais">Mais</string>
+    <string name="txtData">DATA</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SharedPreferences</string>
+
+    <string name="txt_label_nome">Nome:</string>
+    <string name="txt_label_sexo">Sexo:</string>
+    <string name="txt_label_feminino">Feminino</string>
+    <string name="txt_label_masculino">Masculino</string>
+    <string name="txt_label_idade">Idade:</string>
+    <string name="txt_btn_salvar">Salvar</string>
+    <string name="txt_label_status">Status</string>
+</resources>

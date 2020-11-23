@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Broadcast Receiver</string>
+
+    <string name="txtBtnService">Service</string>
+    <string name="txtBtnBindService">Bind Service</string>
+    <string name="txtBtnAgedamento">Agendamento</string>
+</resources>
