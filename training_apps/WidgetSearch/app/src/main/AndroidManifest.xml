@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.tecnodev.armazenamentodados">
-
-    <uses-permission android:name="io.tecnodev.contentprovider.WRITE_DATABASE" />
-    <uses-permission android:name="io.tecnodev.contentprovider.READ_DATABASE" />
+    package="io.tecnodev.widgetsearch">
 
     <application
         android:allowBackup="true"
@@ -11,16 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SharedPreferences">
-        <activity android:name=".LerContentProviderActivity">
+        android:theme="@style/Theme.WidgetSearch">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ListActivity" />
-        <activity android:name=".MainActivity">
         </activity>
     </application>
 

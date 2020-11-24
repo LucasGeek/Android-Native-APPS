@@ -2,7 +2,10 @@ package io.tecnodev.armazenamentodados;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -24,9 +27,12 @@ public class MainActivity extends AppCompatActivity {
     final String fem = "Feminino";
 
     private TextView lblStatus;
-    private EditText edtNome, edtIdade;
+    private EditText edtNome, edtIdade, edtTelefone;
     private RadioButton radioMasculino, radioFeminino;
     private RadioGroup groupSexo;
+
+    DbHelper dbHelper;
+    SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         startAtributtes();
         //readPreferences();
         //readArquivoInterno();
-        readArquivoExterno();
+        //readArquivoExterno();
     }
 
     private void startAtributtes() {
@@ -44,13 +50,20 @@ public class MainActivity extends AppCompatActivity {
 
         edtNome = (EditText)  findViewById(R.id.editTextNome);
         edtIdade = (EditText)  findViewById(R.id.editTextIdade);
+        edtTelefone = (EditText)  findViewById(R.id.editTextTelefone);
 
         radioMasculino = (RadioButton) findViewById(R.id.radioMasculino);
         radioFeminino = (RadioButton) findViewById(R.id.radioFeminino);
 
         groupSexo = (RadioGroup) findViewById(R.id.groupSexo);
 
-        findViewById(R.id.btnSalvar).setOnClickListener(clickListenerExterno);
+        findViewById(R.id.btnSalvar).setOnClickListener(clickListenerDB);
+        findViewById(R.id.btnLerData).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ListActivity.class));
+            }
+        });
     }
 
     private void readPreferences() {
@@ -191,6 +204,28 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void salvarDB(String nome, String sexo, String idade, String telefone) {
+        try {
+            dbHelper = new DbHelper(this);
+            db = dbHelper.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+
+            values.put(dbHelper.C_NOME, nome);
+            values.put(dbHelper.C_SEXO, sexo);
+            values.put(dbHelper.C_IDADE, idade);
+            values.put(dbHelper.C_TELEFONE, telefone);
+
+            try {
+                db.insertOrThrow(dbHelper.TABLE, null, values);
+            } finally {
+                db.close();
+            }
+        } catch (Exception e) {
+            Log.e("Error DB: ", e.getMessage());
+        }
+    }
+
     private void salvarArquivoInterno(String nome, String sexo, String idade) {
         String dados = "";
         dados += "nome=" + nome;
@@ -234,6 +269,32 @@ public class MainActivity extends AppCompatActivity {
             Log.e("Erro file: ", e.getMessage());
         }
     }
+
+    private View.OnClickListener clickListenerDB = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String nome = edtNome.getText().toString();
+            String idade = edtIdade.getText().toString();
+            String telefone = edtTelefone.getText().toString();
+
+            String sexo = "";
+
+            if(groupSexo.getCheckedRadioButtonId() != -1) {
+                if(groupSexo.getCheckedRadioButtonId() == R.id.radioMasculino) {
+                    sexo = masc;
+                } else if(groupSexo.getCheckedRadioButtonId() == R.id.radioFeminino) {
+                    sexo = fem;
+                }
+
+                salvarDB(nome, sexo, idade, telefone);
+
+                lblStatus.setText("Status: Dados salvos - DB!!");
+            } else {
+                Toast.makeText(MainActivity.this, "Marque alguma opção de sexo", Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
+    };
 
     private View.OnClickListener clickListenerInterno = new View.OnClickListener() {
         @Override

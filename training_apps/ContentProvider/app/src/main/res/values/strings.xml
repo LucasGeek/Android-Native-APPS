@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Livros - Content Provider</string>
+    <string name="txt_titulo">Título</string>
+    <string name="txt_autor">Autor</string>
+</resources>
